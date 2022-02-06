@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        background-color: #7aabfa;
+      "
+    >
+      <div><h1>Bangla Sentiment Analysis</h1></div>
+      <div><h2 style="margin: 0px">Usage</h2></div>
+      <div>
+        <ul>
+          <li>Enter a sentence in the text field</li>
+          <li>Press enter</li>
+        </ul>
+      </div>
+    </div>
+    <div
+      style="
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+      "
+    >
+      <form action="/" method="POST" class="form-control" style="width: 80%">
+        <input type="text" name="text_field" style="width: 80%; height: 50px" />
+        <input type="submit" />
+      </form>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center">
+      {% if show %}
+
+      <div>
+        <h3 style="display: inline-block">Prediction</h3>
+        <h3>{{pred}}</h3>
+      </div>
+
+      {% endif %}
+    </div>
+  </body>
+</html>
